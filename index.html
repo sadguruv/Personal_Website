@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sadguru V. — Master of Computer Applications (MCA) | Software Engineer & Full-Stack Developer | Generative AI & LLM Specialist." />
+  <title>Sadguru V. — Software Engineer & Full-Stack Developer Portfolio</title>
+  
+  <link rel="icon" type="image/png" href="images/sad1.jpg" />
+  <link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+
+  <!-- Ambient Canvas & Background Grid -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-grid-pattern"></div>
+
+  <!-- Main App Wrapper -->
+  <div class="app-layout">
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="images/sad1.jpg" alt="Sadguru V" class="brand-avatar" />
+        <span class="brand-name">SADGURU V.</span>
+      </a>
+
+      <nav class="nav-center">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#quickai">QuickAI Sandbox</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="status-pill"><span class="status-dot"></span> Available</span>
+        <button class="btn btn-secondary btn-sm open-cmd-palette" title="Open Command Palette (Ctrl+K)">🔍 <kbd>Ctrl+K</kbd></button>
+        <button class="btn btn-secondary btn-sm" id="sound-toggle-btn" title="Toggle Sound FX">🔊</button>
+        <button class="btn btn-primary btn-sm open-resume-modal">📄 PDF Resume</button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">⚡ Full-Stack & Generative AI Specialist</div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Sadguru V.</span>
+        </h1>
+        <div class="typing-container">
+          <span id="typing-text"></span><span class="typing-cursor"></span>
+        </div>
+        <p class="hero-description">
+          Proactive Master of Computer Applications (MCA) graduate skilled in building modular SaaS architectures, integrating local LLMs (Ollama) with cloud AI APIs (Gemini API), and crafting ultra-responsive modern frontend applications.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">🚀 Explore Projects</a>
+          <a href="#quickai" class="btn btn-cyan">⚡ Try QuickAI SaaS Sandbox</a>
+          <button class="btn btn-secondary open-resume-modal">📄 View PDF Resume</button>
+        </div>
+      </div>
+
+      <!-- Hero Glass Card -->
+      <div class="hero-card-wrapper">
+        <div class="hero-glass-card">
+          <div class="hero-avatar-wrap">
+            <img src="images/sad1.jpg" alt="Sadguru V." class="hero-avatar-img" />
+            <span class="experience-badge">MCA '26</span>
+          </div>
+          <h2 class="card-name">SADGURU V.</h2>
+          <p class="card-role">Software Engineer & Full-Stack Developer</p>
+          <div class="status-pill" style="margin-bottom: 14px;">📍 Bengaluru, Karnataka, India</div>
+
+          <div class="tech-pills-row">
+            <span class="tech-pill">React.js</span>
+            <span class="tech-pill">Vite</span>
+            <span class="tech-pill">Ollama LLM</span>
+            <span class="tech-pill">Gemini API</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QuickAI SaaS Interactive Sandbox Section -->
+    <section id="quickai" class="section">
+      <div class="section-header">
+        <span class="section-tag">MCA Major Project Showcase</span>
+        <h2 class="section-title">QuickAI SaaS <span class="gradient-text-cyan">Interactive Demo</span></h2>
+        <p class="section-subtitle">Experience the multi-model dual-engine AI pipeline (Ollama Local + Gemini Cloud) directly in your browser.</p>
+      </div>
+
+      <div class="quickai-container">
+        <div class="quickai-topbar">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">
+            Active Engine: <span id="quickai-engine-badge" style="color: #38bdf8; font-weight: 600;">✨ Cloud Gemini API</span>
+          </div>
+          <div class="status-pill" style="background: rgba(124, 58, 237, 0.2); color: #a78bfa; border-color: rgba(124, 58, 237, 0.4);">
+            Quotas: <span id="quickai-credits" style="font-weight: 800;">95</span>/100 Credits Left
+          </div>
+        </div>
+
+        <!-- Prompt Preset Chips -->
+        <div class="prompt-presets">
+          <span class="prompt-preset-chip" data-feature="article" data-prompt="Architecture of Dual-Engine AI SaaS">📝 Article Generator</span>
+          <span class="prompt-preset-chip" data-feature="title" data-prompt="Top Tech Trends for Developers 2026">🔥 Viral Blog Headlines</span>
+          <span class="prompt-preset-chip" data-feature="evaluator" data-prompt="Audit Sadguru V. Candidate Profile">🎯 Resume Evaluator</span>
+          <span class="prompt-preset-chip" data-feature="research" data-prompt="Full-Stack Framework Benchmark">🌐 Deep Web Research</span>
+        </div>
+
+        <div class="quickai-controls">
+          <div class="control-group">
+            <label for="quickai-engine-select">Select AI Engine Pipeline</label>
+            <select id="quickai-engine-select" class="select-input">
+              <option value="gemini">✨ Cloud Engine (Google Gemini 1.5 Flash API)</option>
+              <option value="ollama">⚡ Local Engine (Ollama Llama3 Offline)</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="quickai-feature-select">Select SaaS Workflow Tool</label>
+            <select id="quickai-feature-select" class="select-input">
+              <option value="article">📝 Automated Article Writer & Reasoning</option>
+              <option value="title">🔥 Viral Blog Title Synthesizer</option>
+              <option value="evaluator">🎯 Resume & Career Evaluator</option>
+              <option value="research">🌐 Deep Web Research Synthesizer</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="quickai-prompt-input">Input Context / Custom Prompt</label>
+            <input type="text" id="quickai-prompt-input" class="text-input" placeholder="e.g. Full-Stack GenAI SaaS Architecture..." value="Full-Stack GenAI SaaS Architecture" />
+          </div>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <button id="quickai-run-btn" class="btn btn-primary" style="width: 100%;">
+            ⚡ Run Dual-Engine AI Pipeline
+          </button>
+        </div>
+
+        <!-- Terminal Output -->
+        <div class="terminal-meta-bar">
+          <span>Latency: <strong id="quickai-latency" style="color: var(--cyan-light);">-- ms</strong></span>
+          <span>Tokens: <strong id="quickai-tokens" style="color: var(--primary-light);">-- tokens</strong></span>
+          <button id="quickai-copy-btn" class="btn btn-secondary btn-sm" style="padding: 2px 10px; font-size: 0.72rem;">📋 Copy Response</button>
+        </div>
+        <div class="terminal-output" id="quickai-output-box">
+Click "Run Dual-Engine AI Pipeline" or click a prompt preset to stream live outputs generated by QuickAI's multi-model SaaS engine.
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <span class="section-tag">Featured Engineering Works</span>
+        <h2 class="section-title">Projects & <span class="gradient-text">Practical Experience</span></h2>
+        <p class="section-subtitle">Real-world full-stack applications, AI pipelines, and production deployments.</p>
+      </div>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="genai">Generative AI & LLM</button>
+        <button class="filter-btn" data-filter="web">Full-Stack Web</button>
+        <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: QuickAI SaaS -->
+        <div class="project-card" data-category="genai">
+          <div>
+            <div class="project-header">
+              <h3 class="project-title">QuickAI SaaS Platform</h3>
+              <span class="project-badge">MCA Major Project</span>
+            </div>
+            <p class="project-description">
+              Multi-Model AI Productivity SaaS delivering dual-engine offline local LLM execution (Ollama) combined with cloud AI reasoning (Google Gemini API).
+            </p>
+            <ul class="project-bullets">
+              <li>Dual-engine AI pipeline supporting automated article writing, viral title synthesis, resume evaluation, and deep web research.</li>
+              <li>Automated credit allocation & plan membership system tracking quotas across sessions.</li>
+              <li>Centralized asset management library with download, copy, indexing, and community discussion hub.</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-tech-stack">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Vite</span>
+              <span class="tech-tag">Ollama</span>
+              <span class="tech-tag">Gemini API</span>
+              <span class="tech-tag">Tailwind</span>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <a href="#quickai" class="btn btn-sm btn-cyan">⚡ Launch Sandbox</a>
+              <button class="btn btn-sm btn-secondary open-project-modal" data-project="quickai">📐 Specs</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Personal Portfolio -->
+        <div class="project-card" data-category="web">
+          <div>
+            <div class="project-header">
+              <h3 class="project-title">Personal Showcase Web App</h3>
+              <span class="project-badge">Production Deployment</span>
+            </div>
+            <p class="project-description">
+              Interactive, high-performance web portfolio presenting technical credentials, software repositories, and interactive project demonstrations.
+            </p>
+            <ul class="project-bullets">
+              <li>Standardized fluid layouts, cross-browser rendering, and mobile responsiveness via custom CSS keyframe animations.</li>
+              <li>Continuous deployment pipelines configured on Netlify with performance optimization and caching.</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript ES6+</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">Netlify</span>
+            </div>
+            <button class="btn btn-sm btn-secondary open-project-modal" data-project="portfolio">📐 Showcase Specs</button>
+          </div>
+        </div>
+
+        <!-- Project 3: LLM Microservice & API Proxy -->
+        <div class="project-card" data-category="cloud">
+          <div>
+            <div class="project-header">
+              <h3 class="project-title">AI REST API & Prompt Engine</h3>
+              <span class="project-badge">Backend Service</span>
+            </div>
+            <p class="project-description">
+              Modular API pipeline orchestrating local LLM prompt templates, structured JSON handling, and asynchronous API dispatch.
+            </p>
+            <ul class="project-bullets">
+              <li>Structured payload generation for multimodal inputs and fallback error recovery.</li>
+              <li>State management integration with granular rate limiting and session validation.</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">JSON</span>
+              <span class="tech-tag">State Mgmt</span>
+            </div>
+            <button class="btn btn-sm btn-secondary open-project-modal" data-project="api">📐 System Specs</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-tag">Technical Competencies</span>
+        <h2 class="section-title">Skills & <span class="gradient-text-cyan">Technologies</span></h2>
+        <p class="section-subtitle">Categorized breakdown of software engineering, frontend, backend, and GenAI capabilities.</p>
+      </div>
+
+      <!-- Interactive Code Snippet Triggers -->
+      <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 28px; flex-wrap: wrap;">
+        <button class="btn btn-secondary btn-sm open-snippet" data-snippet="react">💻 View React.js Custom Hook Code</button>
+        <button class="btn btn-secondary btn-sm open-snippet" data-snippet="python">🐍 View Python Gemini Dispatcher Code</button>
+        <button class="btn btn-secondary btn-sm open-snippet" data-snippet="tailwind">🎨 View Tailwind CSS Config Tokens</button>
+      </div>
+
+      <div class="skills-matrix">
+
+        <!-- Frontend -->
+        <div class="skill-category-card">
+          <h3 class="cat-title">💻 Frontend & UI/UX</h3>
+          
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>React.js & Vite</span> <span>92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="92%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>JavaScript (ES6+)</span> <span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="90%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>HTML5 / CSS3 / Tailwind</span> <span>95%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="95%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Bootstrap & Responsive</span> <span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="88%"></div></div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category-card">
+          <h3 class="cat-title">⚙️ Backend & Languages</h3>
+          
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Python</span> <span>85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="85%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Core Java / C / C#</span> <span>80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="80%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>RESTful API Architecture</span> <span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="88%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>JSON & State Management</span> <span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="90%"></div></div>
+          </div>
+        </div>
+
+        <!-- GenAI -->
+        <div class="skill-category-card">
+          <h3 class="cat-title">🤖 Generative AI & LLMs</h3>
+          
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Ollama (Local LLM)</span> <span>92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="92%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Google AI Studio / Gemini API</span> <span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="90%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Prompt Engineering</span> <span>94%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="94%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Multimodal AI Workflows</span> <span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="88%"></div></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category-card">
+          <h3 class="cat-title">🛠️ Tools & DevOps</h3>
+          
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Git & GitHub</span> <span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="90%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Netlify CI/CD</span> <span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="88%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>VS Code / Postman / Vite</span> <span>92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="92%"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Linux / Windows / Agile</span> <span>85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="85%"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education Timeline Section -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <span class="section-tag">Academic Foundation</span>
+        <h2 class="section-title">Education & <span class="gradient-text">Qualifications</span></h2>
+        <p class="section-subtitle">Academic journey culminating in Master of Computer Applications.</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- MCA -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3 class="timeline-degree">Master of Computer Applications (MCA)</h3>
+            <p class="timeline-institution">Atria Institute of Technology, Bengaluru</p>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 6px;">
+              Specialized in Full-Stack Software Engineering, Generative AI Systems, and Modular Cloud Architectures. Built QuickAI SaaS Platform as Major MCA Project.
+            </p>
+          </div>
+        </div>
+
+        <!-- BCA -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3 class="timeline-degree">Bachelor of Computer Applications (BCA)</h3>
+            <p class="timeline-institution">Interface College of Computer Application (ICCA), Davangere</p>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 6px;">
+              Graduated with strong foundations in Data Structures, Object-Oriented Programming (Java, Python, C), Web Technologies, and Database Systems.
+            </p>
+          </div>
+        </div>
+
+        <!-- PUC -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3 class="timeline-degree">Pre-University Course (PUC)</h3>
+            <p class="timeline-institution">SJM Independent PU College, Chitradurga</p>
+          </div>
+        </div>
+
+        <!-- SSLC -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <h3 class="timeline-degree">Secondary School Leaving Certificate (SSLC)</h3>
+            <p class="timeline-institution">Jnana Bharathi Vidya Mandira, Chitradurga</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+      <div class="section-header">
+        <span class="section-tag">Personal Media</span>
+        <h2 class="section-title">Photo <span class="gradient-text-cyan">Gallery</span></h2>
+        <p class="section-subtitle">Click any image to view in full resolution.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/sad1.jpg" alt="Sadguru V 1" /><div class="gallery-overlay"><span>📸 Sadguru V. — Photo 1</span></div></div>
+        <div class="gallery-item"><img src="images/sad2.jpg" alt="Sadguru V 2" /><div class="gallery-overlay"><span>📸 Sadguru V. — Photo 2</span></div></div>
+        <div class="gallery-item"><img src="images/sad3.jpg" alt="Sadguru V 3" /><div class="gallery-overlay"><span>📸 Sadguru V. — Photo 3</span></div></div>
+        <div class="gallery-item"><img src="images/sad4.jpg" alt="Sadguru V 4" /><div class="gallery-overlay"><span>📸 Sadguru V. — Photo 4</span></div></div>
+        <div class="gallery-item"><img src="images/sad5.jpg" alt="Sadguru V 5" /><div class="gallery-overlay"><span>📸 Sadguru V. — Photo 5</span></div></div>
+        <div class="gallery-item"><img src="images/sad6.jpg" alt="Sadguru V 6" /><div class="gallery-overlay"><span>📸 Sadguru V. — Photo 6</span></div></div>
+      </div>
+    </section>
+
+    <!-- Contact Hub Section -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Contact & <span class="gradient-text">Reach Out</span></h2>
+        <p class="section-subtitle">Open for full-stack engineering roles, GenAI consultations, and software collaborations.</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Cards -->
+        <div class="contact-info-cards">
+          <div class="contact-card-item copy-trigger" data-copy="sadguruvsurimatt@gmail.com" style="cursor: pointer;">
+            <div class="contact-icon">📧</div>
+            <div class="contact-detail">
+              <label>Email Address (Click to Copy)</label>
+              <p>sadguruvsurimatt@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-card-item copy-trigger" data-copy="+917892467429" style="cursor: pointer;">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail">
+              <label>Phone Number (Click to Copy)</label>
+              <p>+91 78924 67429</p>
+            </div>
+          </div>
+
+          <a href="https://sadgururesume.netlify.app" target="_blank" rel="noopener" class="contact-card-item">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-detail">
+              <label>Live Portfolio Site</label>
+              <p>sadgururesume.netlify.app ↗</p>
+            </div>
+          </a>
+
+          <div class="contact-card-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <label>Current Location</label>
+              <p>Bengaluru & Chitradurga, Karnataka, India</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form">
+          <h3 style="font-size: 1.3rem; margin-bottom: 4px;">Send a Direct Message</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">I typically respond within a few hours.</p>
+
+          <div class="control-group">
+            <label for="contact-name">Your Full Name</label>
+            <input type="text" id="contact-name" name="name" class="text-input" placeholder="e.g. John Doe" required />
+          </div>
+
+          <div class="control-group">
+            <label for="contact-email">Your Email Address</label>
+            <input type="email" id="contact-email" name="email" class="text-input" placeholder="e.g. john@example.com" required />
+          </div>
+
+          <div class="control-group">
+            <label for="contact-message">Message Details</label>
+            <textarea id="contact-message" name="message" class="text-input" rows="4" placeholder="Briefly describe your project or role opportunities..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+            🚀 Send Direct Message
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; border-top: 1px solid var(--glass-border); padding-top: 40px; margin-top: 60px; color: var(--text-dim); font-size: 0.88rem;">
+      <p>© 2026 Sadguru V. — Engineered with React, Vite, Tailwind & Ollama/Gemini GenAI Integrations.</p>
+      <p style="margin-top: 6px; font-size: 0.78rem;">Bengaluru, Karnataka, India | All Rights Reserved.</p>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

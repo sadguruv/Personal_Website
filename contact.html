@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Sadguru V. — Phone, Email, Location, and Direct Messaging." />
+  <title>Contact — Sadguru V.</title>
+  
+  <link rel="icon" type="image/png" href="images/sad1.jpg" />
+  <link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+
+  <!-- Ambient Canvas & Background Grid -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-grid-pattern"></div>
+
+  <div class="app-layout">
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="images/sad1.jpg" alt="Sadguru V" class="brand-avatar" />
+        <div>
+          <div class="brand-name">SADGURU V.</div>
+          <div class="status-pill"><span class="status-dot"></span> Available for Work</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#quickai">QuickAI Sandbox</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="index.html#education">Education</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-secondary btn-sm open-cmd-palette" title="Open Command Palette (Ctrl+K)">🔍 <kbd style="font-family: var(--font-mono); font-size: 0.7rem;">Ctrl+K</kbd></button>
+        <button class="btn btn-secondary btn-sm" id="sound-toggle-btn">🔊 Sound ON</button>
+        <button class="btn btn-primary btn-sm open-resume-modal">📄 PDF Resume</button>
+      </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact & <span class="gradient-text">Reach Out</span></h2>
+        <p class="section-subtitle">Open for full-stack engineering roles, GenAI SaaS development, and technical consulting.</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Cards -->
+        <div class="contact-info-cards">
+          <div class="contact-card-item copy-trigger" data-copy="sadguruvsurimatt@gmail.com" style="cursor: pointer;">
+            <div class="contact-icon">📧</div>
+            <div class="contact-detail">
+              <label>Email Address (Click to Copy)</label>
+              <p>sadguruvsurimatt@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-card-item copy-trigger" data-copy="+917892467429" style="cursor: pointer;">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail">
+              <label>Phone Number (Click to Copy)</label>
+              <p>+91 78924 67429</p>
+            </div>
+          </div>
+
+          <a href="https://sadgururesume.netlify.app" target="_blank" rel="noopener" class="contact-card-item">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-detail">
+              <label>Live Portfolio Showcase</label>
+              <p>sadgururesume.netlify.app ↗</p>
+            </div>
+          </a>
+
+          <div class="contact-card-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <label>Location</label>
+              <p>Bengaluru & Chitradurga, Karnataka, India</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form">
+          <h3 style="font-size: 1.3rem; margin-bottom: 4px;">Send a Direct Message</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Fill out the form below to initiate direct communication.</p>
+
+          <div class="control-group">
+            <label for="contact-name">Your Full Name</label>
+            <input type="text" id="contact-name" name="name" class="text-input" placeholder="e.g. John Doe" required />
+          </div>
+
+          <div class="control-group">
+            <label for="contact-email">Your Email Address</label>
+            <input type="email" id="contact-email" name="email" class="text-input" placeholder="e.g. john@example.com" required />
+          </div>
+
+          <div class="control-group">
+            <label for="contact-message">Message Details</label>
+            <textarea id="contact-message" name="message" class="text-input" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+            🚀 Send Direct Message
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; border-top: 1px solid var(--glass-border); padding-top: 40px; margin-top: 60px; color: var(--text-dim); font-size: 0.88rem;">
+      <p>© 2026 Sadguru V. — Master of Computer Applications (MCA) Developer Portfolio.</p>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

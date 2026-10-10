@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical Skills & Core Competencies — Sadguru V. | Master of Computer Applications (MCA)." />
+  <title>Technical Skills — Sadguru V.</title>
+  
+  <link rel="icon" type="image/png" href="images/sad1.jpg" />
+  <link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+
+  <!-- Ambient Canvas & Background Grid -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-grid-pattern"></div>
+
+  <div class="app-layout">
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+      <a href="index.html" class="nav-brand">
+        <img src="images/sad1.jpg" alt="Sadguru V" class="brand-avatar" />
+        <span class="brand-name">SADGURU V.</span>
+      </a>
+
+      <nav class="nav-center">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#quickai">QuickAI Sandbox</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="skills.html" class="active">Skills</a></li>
+          <li><a href="index.html#education">Education</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="status-pill"><span class="status-dot"></span> Available</span>
+        <button class="btn btn-secondary btn-sm open-cmd-palette" title="Open Command Palette (Ctrl+K)">🔍 <kbd>Ctrl+K</kbd></button>
+        <button class="btn btn-secondary btn-sm" id="sound-toggle-btn" title="Toggle Sound FX">🔊</button>
+        <button class="btn btn-primary btn-sm open-resume-modal">📄 PDF Resume</button>
+      </div>
+    </header>
+
+    <!-- Skills Header -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Engineering Expertise</span>
+        <h2 class="section-title">Technical Skills & <span class="gradient-text-cyan">Competencies</span></h2>
+        <p class="section-subtitle">Detailed breakdown of full-stack development, Generative AI integration, and dev tools.</p>
+      </div>
+
+      <!-- Interactive Code Snippets -->
+      <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 28px; flex-wrap: wrap;">
+        <button class="btn btn-secondary btn-sm open-snippet" data-snippet="react">💻 View React.js Custom Hook Code</button>
+        <button class="btn btn-secondary btn-sm open-snippet" data-snippet="python">🐍 View Python Gemini Dispatcher Code</button>
+        <button class="btn btn-secondary btn-sm open-snippet" data-snippet="tailwind">🎨 View Tailwind CSS Config Tokens</button>
+      </div>
+
+      <!-- Skills Matrix -->
+      <div class="skills-matrix">
+
+        <!-- Frontend -->
+        <div class="skill-category-card">
+          <h3 class="cat-title">💻 Frontend & UI/UX</h3>
+          
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>React.js & Vite</span> <span>92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="92%" style="width: 92%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>JavaScript (ES6+)</span> <span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="90%" style="width: 90%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>HTML5 / CSS3 / Tailwind CSS</span> <span>95%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="95%" style="width: 95%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Bootstrap & Modular Grids</span> <span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="88%" style="width: 88%;"></div></div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category-card">
+          <h3 class="cat-title">⚙️ Backend & Programming</h3>
+          
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Python</span> <span>85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="85%" style="width: 85%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Core Java / C / C#</span> <span>80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="80%" style="width: 80%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>RESTful API Architecture</span> <span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="88%" style="width: 88%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>JSON & State Management</span> <span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="90%" style="width: 90%;"></div></div>
+          </div>
+        </div>
+
+        <!-- GenAI -->
+        <div class="skill-category-card">
+          <h3 class="cat-title">🤖 Generative AI & LLMs</h3>
+          
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Ollama (Local LLM Deployment)</span> <span>92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="92%" style="width: 92%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Google AI Studio / Gemini API</span> <span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="90%" style="width: 90%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Prompt Engineering</span> <span>94%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="94%" style="width: 94%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Multimodal AI Workflows</span> <span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="88%" style="width: 88%;"></div></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category-card">
+          <h3 class="cat-title">🛠️ Tools, Platforms & DevOps</h3>
+          
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Git & GitHub</span> <span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="90%" style="width: 90%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Netlify CI/CD Pipeline</span> <span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="88%" style="width: 88%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>VS Code / Postman / Vite</span> <span>92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="92%" style="width: 92%;"></div></div>
+          </div>
+
+          <div class="skill-item-bar">
+            <div class="skill-info"><span>Ubuntu OS / Windows / Agile</span> <span>85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="85%" style="width: 85%;"></div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="index.html#projects" class="btn btn-primary">🚀 View Projects Built With These Skills</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; border-top: 1px solid var(--glass-border); padding-top: 40px; margin-top: 60px; color: var(--text-dim); font-size: 0.88rem;">
+      <p>© 2026 Sadguru V. — Master of Computer Applications (MCA) Portfolio.</p>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
